@@ -8,7 +8,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git branch: 'main',
-                    url: 'https://gitlab.com/nravinuthala/pipelines-java.git'
+                    url: 'https://gitlab.com/Aman42988/pipelines-java-1.git'
 
              }
         }
@@ -32,7 +32,7 @@ pipeline {
                 deploy adapters: [tomcat9 (
                         credentialsId: 'tomcat_deployer',
                         path: '',
-                        url: 'http://172.172.47.147:8088/'
+                        url: 'http://172.178.75.48:8088/'
                     )],
                     contextPath: 'test',
                     onFailure: 'false',
